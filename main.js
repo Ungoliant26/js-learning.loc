@@ -39,7 +39,7 @@ myFn() // 10 */
  */
 
 // Жизненный цикл переменной x //
-let x // 1. Объявление 'x' в глобальной области видимости. Её значение undefined
+/* let x // 1. Объявление 'x' в глобальной области видимости. Её значение undefined
 let y
 function myFunc() {
   let y
@@ -49,10 +49,22 @@ function myFunc() {
    * Объявлена ли 'x' в глобальной области видимости? ДА!
    * Тогда присваиваем значение true глобальной переменной 'x'
    */
-  y = 20
+/*  y = 20
   console.log(y) // 5. 'y' имеет значение 20 в области видимости функции
 }
 
 myFunc() // 2. Вызов функции
 console.log(x) // 4. 'x' имеет значение true
-console.log(y)
+console.log(y)  */
+
+//Строгий режим
+
+'use strict'
+
+function myStrict() {
+  x = 10
+  console.log(x)
+}
+
+myStrict()
+console.log(x)
