@@ -57,9 +57,9 @@ myFunc() // 2. Вызов функции
 console.log(x) // 4. 'x' имеет значение true
 console.log(y)  */
 
-//Строгий режим
+//Строгий режим - запрещает использование необъявленных переменных
 
-'use strict'
+/* 'use strict'
 
 function myStrict() {
   x = 10
@@ -67,4 +67,34 @@ function myStrict() {
 }
 
 myStrict()
-console.log(x)
+console.log(x) */ //x is not defined
+
+/* const myForm = {
+  myName: 'Kirill',
+  myAge: 33,
+  myProf: {
+    expProf: 14,
+    mastery: 'Main Engineer',
+  },
+}
+
+const myOptionsForm = {
+  myHobbies: {
+    gamePlay: true,
+    driveCar: false,
+  },
+}
+
+const mySummaryForm = {
+  ...myForm,
+  ...myOptionsForm,
+}
+
+console.table(mySummaryForm) */
+
+const myName = 'Kirill'
+const mySurName = 'Raevski'
+const myAge = 33
+const myInfo = `My name is ${myName} and my surname is ${mySurName}. I was born ${myAge} ago.`
+
+console.log(myInfo)
