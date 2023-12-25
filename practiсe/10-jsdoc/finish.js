@@ -12,3 +12,16 @@
  *
  * 4. Вызовите функцию
  */
+
+/**
+ * Возвращает разницу двух чисел
+ * @param {number} x
+ * @param {number} y
+ * @returns {number} Разница чисел
+ */
+
+function myMath(x, y) {
+  return x - y
+}
+
+console.log(myMath(10, 5))

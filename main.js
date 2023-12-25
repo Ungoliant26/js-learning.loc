@@ -92,9 +92,57 @@ const mySummaryForm = {
 
 console.table(mySummaryForm) */
 
-const myName = 'Kirill'
+/* const myName = 'Kirill'
 const mySurName = 'Raevski'
 const myAge = 33
 const myInfo = `My name is ${myName} and my surname is ${mySurName}. I was born ${myAge} ago.`
 
-console.log(myInfo)
+console.log(myInfo) */
+
+/* setTimeout(function () {
+  console.log('Через 2 секунды')
+}, 2000)
+ */
+
+/* const mathFunc = (number, multi = 2) => {
+  return number * multi
+}
+
+console.log(mathFunc(5, 4)) //20
+console.log(mathFunc(5)) //10 */
+
+/* const myPost = (today, postIn = Date()) => {
+  return {
+    ...today,
+    postIn,
+  }
+}
+
+const todayPost = {
+  idPost: 1,
+  userName: 'Kirill',
+}
+
+console.table(myPost(todayPost)) */
+
+/* const functionError = () => {
+  throw new Error('Shit Error')
+}
+
+functionError()
+
+console.log('Continue...')
+ */
+
+/* const functionError = () => {
+  throw new Error('Shit Error') // вызывает срабатывание неопознанной ошибки
+}
+
+try {
+  functionError() // пробуем вызвать функцию
+} catch (error) { // ошибка будет присвоено как значение переменной (error)
+  console.error(error) // метод вывода ошибок в консоль
+  console.log(error.message) // у каждой ошибки есть свойство .message('Shit Error')
+}
+
+console.log('Continue...') // ловим ошибку блоком try/catch и код продолжает работу */

@@ -10,3 +10,13 @@
  *
  * 5. Перепишите функцию так, чтобы результат возвращался неявно
  */
+
+/* const testPerem = () => {
+  return 'Hello World'
+}
+
+console.log(testPerem()) */
+
+const testPerem = () => 'Hello World' // функция состоит из одного выражения
+
+console.log(testPerem())
