@@ -146,3 +146,14 @@ try {
 }
 
 console.log('Continue...') // ловим ошибку блоком try/catch и код продолжает работу */
+
+const myMass = new Array(4, true, 'Kirill')
+const myMass1 = [4, true, 'Kirill']
+console.log(myMass.length)
+console.log(myMass1[0])
+
+myMass.pop()
+console.log(myMass)
+
+const removedElem = myMass.pop()
+console.log(removedElem)
