@@ -4,3 +4,7 @@
  *
  * 2. Виведите в консоль длину этой строки
  */
+
+const testText = 'I am from Russia'
+
+console.log(`Длина строки равняется ${testText.length}`)

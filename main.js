@@ -158,13 +158,13 @@ console.log(myMass)
 const removedElem = myMass.pop()
 console.log(removedElem) */
 
-const myMass = [5, 10, 50]
+/* const myMass = [5, 10, 50]
 
 const myMap = myMass.map((elem) => {
   return elem * 3
 })
 console.log(myMass)
-console.log(myMap)
+console.log(myMap) */
 /**
  * [ 5, 10, 50 ]
 [ 2.5, 5, 25 ]
