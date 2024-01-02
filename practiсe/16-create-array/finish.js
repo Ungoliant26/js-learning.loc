@@ -6,3 +6,8 @@
  *
  * 3. Выведите в консоль длину массива
  */
+
+const myTestArray = [1, true, 'Kirill']
+
+console.log(`Первый элемент массива: ${myTestArray[0]}`)
+console.log(`Длина массива: ${myTestArray.length}`)

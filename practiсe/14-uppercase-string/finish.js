@@ -12,3 +12,16 @@
  *
  * 5. Выведите в консоль значение второй переменной
  */
+
+const myString = 'Test message'
+console.log(myString instanceof String)
+console.log(`Тип переменной myString - ${typeof myString}`)
+
+const myStringUpper = myString.toUpperCase() // вызов метода экземпляра string
+console.log(myStringUpper) // TEST MESSAGE
+
+// Создание экземпляра String
+
+/* const myTest = new String('Kirill')
+console.log(myTest instanceof String)
+console.log(typeof myTest) */
