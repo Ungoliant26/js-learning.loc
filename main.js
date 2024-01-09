@@ -169,3 +169,45 @@ console.log(myMap) */
  * [ 5, 10, 50 ]
 [ 2.5, 5, 25 ]
  */
+
+/* const myTestInfo = {
+  userName: 'Kirill',
+  userAge: 33,
+  userSex: 'Male',
+}
+
+const { userName, userAge, userSex } = myTestInfo
+
+console.log(userName) // Kirill
+console.log(userAge) // 33
+console.log(userSex) // Male */
+
+/* const carsArray = ['BMW', 'Mazda', 'Lada']
+const [carOne, carTwo, carThree] = carsArray
+
+console.log(carOne) // BMW
+console.log(carTwo) // Mazda
+console.log(carThree) // Lada */
+
+const myTestInfo = {
+  userName: 'Kirill',
+  userAge: 19,
+  userSex: 'Male',
+}
+
+const userSubInfoAdmin = ({ userName, userSex }) => {
+  if (userName != 'Kirill' || userSex != 'Male') {
+    return `The user ${userName} is not an admin and his gender a ${userSex}`
+  }
+  return `Welcome admin man ${userName}`
+}
+
+const userSubInfoAgeGender = ({ userName, userAge }) => {
+  if (userAge <= 18) {
+    return `The user ${userName} is not adult. Go home child!`
+  }
+  return `Welcome adult ${userName}!`
+}
+
+console.log(userSubInfoAdmin(myTestInfo)) // The user Tommy is not an admin and his gender a Male
+console.log(userSubInfoAgeGender(myTestInfo)) // The user Tommy is not adult. Go home child!

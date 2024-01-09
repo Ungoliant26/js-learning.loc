@@ -6,3 +6,19 @@
  *
  * 3. Выведите в консоль длину результирующего массива
  */
+
+const myTestArray = [22, true, 2.2, 'Test']
+
+console.log(
+  `Оригинальный массив: [${myTestArray.join(', ')}]; Длина: ${
+    myTestArray.length
+  }`
+)
+
+myTestArray.push('New', 6)
+
+console.log(
+  `Обновлённый массив: [${myTestArray.join(', ')}]; Длина: ${
+    myTestArray.length
+  }`
+)

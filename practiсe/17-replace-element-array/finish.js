@@ -9,10 +9,8 @@
  * 4. Выведите в консоль измененный массив
  */
 
-const myTestArray = [0, 'null1', 'Test', false]
-const myTestArrayNull = myTestArray.splice(1, 1, 'null2')
+const myTestArray = [0, 1.11, 'Test', false]
+console.log(`Оригинальный массив: [${myTestArray.join(', ')}]`)
 
-console.log(`Оригинальный массив: [${myTestArrayNull.join(', ')}]`)
-
-myTestArray[1] = 9.99
+myTestArray[2] = 'Complete'
 console.log(`Изменённый массив: [${myTestArray.join(', ')}]`)

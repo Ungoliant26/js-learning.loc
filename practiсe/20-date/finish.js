@@ -4,3 +4,9 @@
  *
  * 2. Выведите значение в консоль
  */
+
+const currentDate = new Date()
+
+const currentDateInMs = currentDate.getMilliseconds()
+
+console.log(currentDateInMs)

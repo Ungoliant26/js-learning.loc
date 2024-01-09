@@ -5,3 +5,7 @@
  * 2. Используя один из методов массивов, переберите все элементы
  * и выведите каждый элемент в консоль
  */
+
+const testArray = [1, null, 5, undefined]
+
+testArray.forEach((i) => console.log(i))
