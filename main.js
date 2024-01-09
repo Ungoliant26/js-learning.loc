@@ -189,7 +189,9 @@ console.log(carOne) // BMW
 console.log(carTwo) // Mazda
 console.log(carThree) // Lada */
 
-const myTestInfo = {
+// Деструктуризация массива
+
+/* const myTestInfo = {
   userName: 'Kirill',
   userAge: 19,
   userSex: 'Male',
@@ -210,4 +212,4 @@ const userSubInfoAgeGender = ({ userName, userAge }) => {
 }
 
 console.log(userSubInfoAdmin(myTestInfo)) // The user Tommy is not an admin and his gender a Male
-console.log(userSubInfoAgeGender(myTestInfo)) // The user Tommy is not adult. Go home child!
+console.log(userSubInfoAgeGender(myTestInfo)) // The user Tommy is not adult. Go home child! */

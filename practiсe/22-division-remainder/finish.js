@@ -10,3 +10,13 @@
 
 const myNumber1 = 10 // 10 = 3 + 3 + 3 + 1
 const myNumber2 = 3
+
+console.log(myNumber1 % myNumber2) // 1
+
+/**
+ * У остатка от деления приоритет - 12
+ * Ассоциативность слева направо
+ * https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Operators/Operator_precedence
+ */
+
+console.log(((100 % 23) % 5) % 3)
