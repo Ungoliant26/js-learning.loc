@@ -213,3 +213,34 @@ const userSubInfoAgeGender = ({ userName, userAge }) => {
 
 console.log(userSubInfoAdmin(myTestInfo)) // The user Tommy is not an admin and his gender a Male
 console.log(userSubInfoAgeGender(myTestInfo)) // The user Tommy is not adult. Go home child! */
+
+/* const myInfo = {
+  myName: 'Kirill',
+  myAge: 33,
+}
+
+if (!myInfo.myName && myInfo.myName != false) {
+  console.log('Нет имени')
+}
+
+if (typeof myInfo.myName == 'number' || typeof myInfo.myName === 'boolean') {
+  console.log('Некорректное имя')
+}
+
+if (typeof myInfo.myName == 'string') {
+  console.log(`Имя пользователя: ${myInfo.myName}`)
+} */
+
+const sumPlusNumbers = (x, y) => {
+  if (typeof x !== 'number' || typeof y !== 'number') {
+    return 'Один из аргументов не является числом'
+  }
+
+  if (x <= 0 || y <= 0) {
+    return 'Одно из чисел равно или меньше 0'
+  }
+
+  return x + y
+}
+
+console.log(sumPlusNumbers(10, 5))
