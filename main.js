@@ -231,7 +231,7 @@ if (typeof myInfo.myName == 'string') {
   console.log(`Имя пользователя: ${myInfo.myName}`)
 } */
 
-const sumPlusNumbers = (x, y) => {
+/* const sumPlusNumbers = (x, y) => {
   if (typeof x !== 'number' || typeof y !== 'number') {
     return 'Один из аргументов не является числом'
   }
@@ -243,4 +243,23 @@ const sumPlusNumbers = (x, y) => {
   return x + y
 }
 
-console.log(sumPlusNumbers(10, 5))
+console.log(sumPlusNumbers(10, 5)) */
+
+/* const adminName = 'Kirill'
+const userName = 'Kirill'
+
+switch (userName) {
+  case 'Kirill':
+    console.log('Привет админ!')
+    break
+  case 'Oleg':
+    let x = 10
+    x += 10
+    console.log(x)
+    break
+  case 'Joe':
+    console.log(`Hello ${adminName} this is Joe. You friend!`)
+    break
+  default:
+    console.log(Error('Attention! Intruder!'))
+} */
