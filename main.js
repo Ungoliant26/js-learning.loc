@@ -263,3 +263,8 @@ switch (userName) {
   default:
     console.log(Error('Attention! Intruder!'))
 } */
+
+const myValue1 = 0
+const myValue2 = 2
+
+myValue1 && myValue2 ? myFunc1(myValue1, myValue2) : myFunc2()
