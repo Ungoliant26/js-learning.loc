@@ -264,7 +264,15 @@ switch (userName) {
     console.log(Error('Attention! Intruder!'))
 } */
 
-const myValue1 = 0
-const myValue2 = 2
+/* const testArray = [1, true, 'Kir']
 
-myValue1 && myValue2 ? myFunc1(myValue1, myValue2) : myFunc2()
+testArray.forEach((elem, index) => {
+  console.log(`Элемент массива: ${elem}. Индекс в массиве: ${index}`)
+}) */
+
+let myPerem = 0
+
+while (myPerem < 5) {
+  console.log(myPerem)
+  myPerem++
+}
