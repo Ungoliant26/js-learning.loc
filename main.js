@@ -270,9 +270,33 @@ testArray.forEach((elem, index) => {
   console.log(`Элемент массива: ${elem}. Индекс в массиве: ${index}`)
 }) */
 
-let myPerem = 0
+/* let myPerem = 0
 
 while (myPerem < 5) {
   console.log(myPerem)
   myPerem++
+} */
+/* 
+let myI = 0
+do {
+  console.log(myI)
+  myI++
+} while (myI < 5) */
+
+/* const testObject = {
+  firstP: true,
+  secondP: 'Kir',
+  thirdP: 22,
 }
+
+for (const key in testObject) {
+  console.log(key, testObject[key])
+} */
+
+/* const testMessage = 'Hello my dear user. Hello my darling'
+
+for (const message of testMessage) {
+  if (message == 'H' || message == 'u') {
+    console.log(message)
+  }
+} */
