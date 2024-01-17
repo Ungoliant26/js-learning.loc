@@ -29,6 +29,11 @@ let randomNumber = myRandomNumber(MIN, MAX)
 
 console.log(randomNumber)
 
-testArray.forEach((elem, index) => {
+/* testArray.forEach((elem, index) => {
   console.log(`Элемент массива: ${elem}. Индекс в массиве: ${index}`)
 })
+ */
+
+/* if (message == 'H' || message == 'u') {
+    console.log(message)
+  } */
