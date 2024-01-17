@@ -1,3 +1,4 @@
-import myTestFunc from './moduleOne.mjs'
+import { testFunc as myFunc, myTestName } from './moduleOne.mjs'
 
-console.log(myTestFunc(5, 10))
+console.log(myFunc(5, 10))
+console.log(myTestName)

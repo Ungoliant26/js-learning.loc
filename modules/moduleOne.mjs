@@ -3,4 +3,6 @@ const testFunc = (x, y) => {
   return z
 }
 
-export default testFunc
+const myTestName = 'Kirill'
+
+export { testFunc, myTestName }

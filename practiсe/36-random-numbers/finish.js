@@ -18,3 +18,17 @@ const MIN = 1000
 const MAX = 9999
 
 const myNumbers = [2355, 7235, 8135, 1762, 2361, 8351]
+
+function myRandomNumber(MIN, MAX) {
+  MIN = Math.ceil(MIN)
+  MAX = Math.floor(MAX)
+  return Math.floor(Math.random() * (MAX - MIN + 1)) + MIN
+}
+
+let randomNumber = myRandomNumber(MIN, MAX)
+
+console.log(randomNumber)
+
+testArray.forEach((elem, index) => {
+  console.log(`Элемент массива: ${elem}. Индекс в массиве: ${index}`)
+})
