@@ -14,26 +14,61 @@
  *  - для добавления случайного числа в массив с возвратом измененного массива
  */
 
-const MIN = 1000
-const MAX = 9999
+const MIN = 1000 // Минимальное число при случайной генерации
+const MAX = 9999 // Максимальное число при случайной генерации
 
-const myNumbers = [2355, 7235, 8135, 1762, 2361, 8351]
-
-function myRandomNumber(MIN, MAX) {
-  MIN = Math.ceil(MIN)
-  MAX = Math.floor(MAX)
+const myNumbers = [2355, 7235, 8135, 1762, 2361, 8351] // Данный массив, с которым будет сравниваться генерация числа
+/**
+ * Стрелочная функция генерации случайного числа с параметрами(аргументами)
+ * MIN и MAX - диапазон генерации числа
+ * @param {Number} MIN
+ * @param {Number} MAX
+ * @returns {Number} случайно сгенерированное число
+ */
+const randomNumber = (MIN, MAX) => {
   return Math.floor(Math.random() * (MAX - MIN + 1)) + MIN
 }
 
-let randomNumber = myRandomNumber(MIN, MAX)
-
-console.log(randomNumber)
-
-/* testArray.forEach((elem, index) => {
-  console.log(`Элемент массива: ${elem}. Индекс в массиве: ${index}`)
-})
+/**
+ * 1. Внутри функции сначала создаём переменную
+ * newRandNum(ей присваиваются случайно сгенерированные числа)
+ * 2. Затем создаём копию массива updatedArr,
+ * чтобы не менять внешнюю переменную(ориг.массив)
+ * 3. В цикле do ... while(для того, чтобы сгенерировать числа хотя бы один раз)
+ * выполняем генерацию случайного числа
+ * 4. Заносим в updatedArr уникальное сгенерированное число и
+ * возвращаем новый массив с этим числом
+ * @param {Array} array
+ * @param {Number} MIN
+ * @param {Number} MAX
+ * @returns {Array} возвращает обновлённый массив с уникальным числом,
+ * которого нет в исходном массиве
  */
 
-/* if (message == 'H' || message == 'u') {
-    console.log(message)
-  } */
+const addRandNumToArr = (array, MIN, MAX) => {
+  let newRandNum // объявляем переменную для записи сгенерированного числа
+  const updatedArr = [...array] // Копируем оригинальный массив
+
+  do {
+    newRandNum = randomNumber(MIN, MAX) // Генерируем случайное число в цикле
+    // console.log(newRandNum) // Чтобы увидеть сколько раз уникальное число было сгенерировано
+  } while (updatedArr.includes(newRandNum))
+  /**                     ^
+   * Пока сгенерированное число есть в массиве
+   * мы генерируем новое число, до тех пор, пока
+   * оно не станет уникальным. Тогда выходим их цикла.
+   */
+  updatedArr.push(newRandNum)
+  return updatedArr
+}
+/**
+ * Вызываем функицю addRandNumToArr и передаём
+ * три аргумента: новый массив и минимальное и максимальное
+ * значения для генерации случайного числа.
+ * Функция возвращает обновленный массив, который будет виден в
+ * глобальной области видимости
+ */
+const updatedArr = addRandNumToArr(myNumbers, MIN, MAX)
+
+console.log(`Оригинальный массив:[${myNumbers}]`) // Вывод оригинального массива
+console.log(`Обновлённый массив: [${updatedArr}]`) // Вывод обновлённого массива с уникальным числом
