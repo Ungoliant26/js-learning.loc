@@ -301,7 +301,7 @@ for (const message of testMessage) {
   }
 } */
 
-class Comment {
+/* class Comment {
   constructor(text) {
     this.text = text
     this.votes = 0
@@ -310,17 +310,28 @@ class Comment {
   upvote() {
     this.votes += 1
   }
+
+  static myMergeComments(one, two) {
+    // Метод static доступен как свойства класса
+    // Метод Конкатенация(объединения) строк
+    return `${one} ${two}`
+  }
 }
 
-const myComment = new Comment('My comment')
-const myComment1 = new Comment('My second comment')
+Comment.myMergeComments('One comment', 'Two comment') */
 
-myComment.upvote()
-console.log(myComment.votes) // 1
-myComment.upvote()
-console.log(myComment.votes) // 2
+/**
+ * Расширяем класс массив
+ *
+ */
 
-myComment1.upvote()
-console.log(myComment1.votes) // 1
-myComment1.upvote()
-console.log(myComment1.votes) // 2
+class testArray extends Array {
+  mySum() {
+    return this.reduce((i, accum) => (accum += i), 0) // суммируем элементы массива
+    // i - элемент массива, accum - переменная, которая изменяется в процессе итерации по массиву
+  }
+}
+
+const myTestArr = new testArray(10, 20, 30, 40)
+
+console.log(myTestArr.mySum()) // 100
