@@ -325,7 +325,7 @@ Comment.myMergeComments('One comment', 'Two comment') */
  *
  */
 
-class testArray extends Array {
+/* class testArray extends Array {
   mySum() {
     return this.reduce((i, accum) => (accum += i), 0) // суммируем элементы массива
     // i - элемент массива, accum - переменная, которая изменяется в процессе итерации по массиву
@@ -334,4 +334,4 @@ class testArray extends Array {
 
 const myTestArr = new testArray(10, 20, 30, 40)
 
-console.log(myTestArr.mySum()) // 100
+console.log(myTestArr.mySum()) // 100 */
