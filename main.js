@@ -300,3 +300,27 @@ for (const message of testMessage) {
     console.log(message)
   }
 } */
+
+class Comment {
+  constructor(text) {
+    this.text = text
+    this.votes = 0
+  }
+
+  upvote() {
+    this.votes += 1
+  }
+}
+
+const myComment = new Comment('My comment')
+const myComment1 = new Comment('My second comment')
+
+myComment.upvote()
+console.log(myComment.votes) // 1
+myComment.upvote()
+console.log(myComment.votes) // 2
+
+myComment1.upvote()
+console.log(myComment1.votes) // 1
+myComment1.upvote()
+console.log(myComment1.votes) // 2
