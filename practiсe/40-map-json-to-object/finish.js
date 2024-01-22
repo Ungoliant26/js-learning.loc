@@ -15,3 +15,19 @@ const postsJSON = [
   '{"postId":6134,"commentsQuantity":2}',
   '{"postId":2351,"commentsQuantity":8}',
 ]
+
+/**
+ * Создаём новую копию массива и конвертируем его в JS массив
+ * Перебераем все элементы массива postsJSON с помощью метода map и коллбэк функции
+ * Присваем новый массив переменной postJS
+ */
+/* const postsJS = postsJSON.map((myPost) => JSON.parse(myPost)) */
+
+// Альтернативный вариант
+
+const postsJS = postsJSON.map(JSON.parse)
+
+console.log(postsJS)
+
+console.log(postsJS[1].postId)
+console.log(postsJS[postsJS.length - 1].commentsQuantity)

@@ -335,3 +335,36 @@ Comment.myMergeComments('One comment', 'Two comment') */
 const myTestArr = new testArray(10, 20, 30, 40)
 
 console.log(myTestArr.mySum()) // 100 */
+
+/**
+ * new Promise - передаём в качестве аргумента callback функцию
+ * у функции 2 параметра - resolve(успешно) и reject(ошибка)
+ * внутри callback функции вызываем fetch(метод, который выполняет асинхронный запрос на сервер)
+ * myData можно использовать как модуль в других файлах
+ * @param {url} url
+ * @returns функция myData неявно возвращает промис
+ */
+
+const myData = (url) =>
+  new Promise((resolve, reject) =>
+    fetch(url)
+      .then((response) => response.json())
+      .then((json) => resolve(json))
+      .catch((error) => reject(error))
+  )
+
+myData('https://jsonplaceholder.typicode.com/posts/1')
+  .then((data) => console.log(data)) // в случае resolve. data указывает на resolve(json)
+  .catch((error) => console.log(error.message)) // в случае reject. error указывает на reject(error)
+
+/**
+ * Результат выполнения кода
+ * {
+  userId: 1,
+  id: 1,
+  title: 'sunt aut facere repellat provident occaecati excepturi optio reprehenderit',
+  body: 'quia et suscipit\n' +
+    'suscipit recusandae consequuntur expedita et cum\n' +
+    'reprehenderit molestiae ut ut quas totam\n' +
+    'nostrum rerum est autem sunt rem eveniet architecto'
+} */
