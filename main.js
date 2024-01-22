@@ -345,7 +345,7 @@ console.log(myTestArr.mySum()) // 100 */
  * @returns функция myData неявно возвращает промис
  */
 
-const myData = (url) =>
+/* const myData = (url) =>
   new Promise((resolve, reject) =>
     fetch(url)
       .then((response) => response.json())
@@ -355,7 +355,7 @@ const myData = (url) =>
 
 myData('https://jsonplaceholder.typicode.com/posts/1')
   .then((data) => console.log(data)) // в случае resolve. data указывает на resolve(json)
-  .catch((error) => console.log(error.message)) // в случае reject. error указывает на reject(error)
+  .catch((error) => console.log(error.message)) */ // в случае reject. error указывает на reject(error)
 
 /**
  * Результат выполнения кода

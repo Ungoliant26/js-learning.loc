@@ -12,6 +12,10 @@
  * 4. Также внутри функции выведите в консоль ID поста
  */
 
+const findPostById = (postId, arrayPosts) => {
+  return arrayPosts.find((post) => post.postId === postId)
+}
+
 const posts = [
   { postId: 1355, commentsQuantity: 5 },
   { postId: 5131, commentsQuantity: 13 },
