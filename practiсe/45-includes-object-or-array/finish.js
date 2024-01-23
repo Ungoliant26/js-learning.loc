@@ -9,6 +9,26 @@
  * а затем применить метод "includes" с аргументом, который также будет преобразован в строку
  */
 
+/**
+ * В функции isElementInArray выполняем проверку типа
+ * Если searchElement не объект, то возвращаем результат inputArray.includes
+ * Если тип Объект, то возвращаем результат вызова методов map и includes
+ * map вернёт строки путем конвертации элементов массива inputArray с помощью JSON.stringify(el)
+ * Возвращаем результирующий массив с помощью метода includes и так же переводим вывод в строку
+ * @param {Element} searchElement
+ * @param {Array} inputArray
+ * @returns результат двух методов
+ */
+const isElementInArray = (searchElement, inputArray) => {
+  if (typeof searchElement !== 'object') {
+    return inputArray.includes(searchElement)
+  }
+
+  return inputArray
+    .map((el) => JSON.stringify(el))
+    .includes(JSON.stringify(searchElement))
+}
+
 const tags = [
   ['javascript', 'es6'],
   ['css', 'flexbox'],

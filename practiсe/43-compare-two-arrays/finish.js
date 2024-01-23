@@ -11,10 +11,20 @@
  * ВАЖНО: Исходите из того, что массивы содержат элементы примитивных типов
  */
 
+const areArraysEqual = (firstArray, secondArray) => {
+  if (
+    firstArray.length === secondArray.length &&
+    firstArray.every((el, i) => el === secondArray[i])
+  ) {
+    return true
+  }
+  return false
+}
+
 const a = [1, 2, 3]
 const b = [1, 2, 3]
 
-console.log(a === b) // false (Почему?)
+console.log(a === b) // false (Почему?) переменные ссылаются на разные объекты в памяти
 
 const c = [2, 1, 3]
 const d = [1, 2, 3, 4]
