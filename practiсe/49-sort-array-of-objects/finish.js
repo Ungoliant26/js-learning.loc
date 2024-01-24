@@ -9,15 +9,6 @@
  * 3. Оригинальный массив должен остаться без изменений
  */
 
-/* const sortProductsByPrice = (products) => {
-  products.every(price, userProduct) => {
-index > 0 ? el >= inputArray[indexElem - 1] : true
-  }
-} */
-
-/* inputArray.every((el, indexElem) =>
-indexElem > 0 ? el >= inputArray[indexElem - 1] : true */
-
 const inputProducts = [
   {
     title: 'Phone case',
@@ -45,12 +36,12 @@ const inputProducts = [
   },
 ]
 
-// const sortedProducts = sortProductsByPrice(inputProducts)
+const sortProductsByPrice = (products) =>
+  [...products].sort(
+    (firstPrice, secondPrice) => firstPrice.price - secondPrice.price
+  )
+const sortedProducts = sortProductsByPrice(inputProducts)
 
-// console.log(sortedProducts) // Массив отсортированных товаров
+console.log(sortedProducts) // Массив отсортированных товаров
 
-// console.log(inputProducts) // Оригинальный массив не должен измениться
-
-const testArray = [44, 32, 11, 111]
-
-console.log(testArray.sort())
+console.log(inputProducts) // Оригинальный массив не должен измениться
