@@ -368,3 +368,32 @@ myData('https://jsonplaceholder.typicode.com/posts/1')
     'reprehenderit molestiae ut ut quas totam\n' +
     'nostrum rerum est autem sunt rem eveniet architecto'
 } */
+
+/**
+ * Создаем новый Промис "myTimer" с callback функцией
+ * В теле функции вызываем функцию "setTimeout"
+ * В функцию "setTimeout" передаём callback функцию
+ * Через 2с эта callback функция будет вызвана
+ *
+ * Объявляем асинхронную стрелочную функцию myAsyncFn
+ * Выводим в консоль сообщение 'Start Timer'
+ * В промежутке засекаем время исполнения промиса "performance.now()"
+ * Ожидаем результат промиса await, который будет возвращён "myTimer"
+ * После возврата результата выводим следующее сообщение 'Shut down Timer'
+ * и кол-во мсек между выполнениями команд вывода в консоль
+ * @returns Promise
+ */
+
+const myTimer = () =>
+  new Promise((resolve, reject) => setTimeout(() => resolve(), 2000))
+
+const myAsyncFn = async () => {
+  console.log('Start Timer')
+  const startTimer = performance.now()
+  await myTimer()
+  const endTimer = performance.now()
+  console.log('Shut down Timer', endTimer - startTimer)
+}
+
+myAsyncFn() //Start Timer
+//Shut down Timer 2002.5908999443054
