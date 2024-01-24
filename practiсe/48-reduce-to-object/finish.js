@@ -7,6 +7,27 @@
  * равными сумме всех количеств в каждой категории
  */
 
+/**
+ * Создаём функцию "quantitiesByCategories" с одним аргументом - массивом
+ * Формируем новый объект с помощью метода reduce
+ * Этот объект присваивается переменной "categoriesQtys"
+ * userProduct - меняется и значением будет объект
+ * В callback функции выполняем деструктуризацию объекта для оптимизации кода
+ * Далее присваимаем [] динамическое значение для свойства "categoriesQtys"
+ * (categoriesQtys[category] || 0) + quantity - добавляем кол-во текущего продукта
+ * к предущему значению(если значения в categoriesQtys еще нет, то получаем 0)
+ * @param {Array} products
+ * @returns результат вызова метода reduce.
+ * Так же возвращаем обновлённый объект с ключами - "categoriesQtys"
+ */
+const quantitiesByCategories = (products) => {
+  return products.reduce((categoriesQtys, userProduct) => {
+    const { category, quantity } = userProduct
+    categoriesQtys[category] = (categoriesQtys[category] || 0) + quantity
+    return categoriesQtys
+  }, {})
+}
+
 const inputProducts = [
   {
     title: 'Phone case',
