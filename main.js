@@ -384,7 +384,7 @@ myData('https://jsonplaceholder.typicode.com/posts/1')
  * @returns Promise
  */
 
-const myTimer = () =>
+/* const myTimer = () =>
   new Promise((resolve, reject) => setTimeout(() => resolve(), 2000))
 
 const myAsyncFn = async () => {
@@ -396,4 +396,22 @@ const myAsyncFn = async () => {
 }
 
 myAsyncFn() //Start Timer
-//Shut down Timer 2002.5908999443054
+//Shut down Timer 2002.5908999443054 */
+
+/* const myData = async (url) => {
+  // async(url) - промис в состоянии panding
+  const myRes = await fetch(url) // ожидаем исполнение или отклонение промиса,
+  // который будет возвращён функцией fetch и присваиваем результат "myRes"
+  const json = await myRes.json() // ожидаем исполнение или отклонение промиса,
+  // который присваем переменной "json"
+  return json // промис будет исполнен
+}
+
+const url = 'https://jsonplaceholder.typicode.com/posts/1'
+
+try {
+  const data = await myData(url)
+  console.log(data)
+} catch (error) {
+  console.log(error.message)
+} */
