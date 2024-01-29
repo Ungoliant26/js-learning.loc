@@ -8,6 +8,15 @@
  * 3. Также верните эту сумму как результат функции
  */
 
+function sumNumbers() {
+  let userSum = 0
+  for (let myIndex = 0; myIndex < arguments.length; myIndex++) {
+    userSum += arguments[myIndex]
+  }
+  console.log(`Сумма всех аргументов: ${userSum}`)
+  return userSum
+}
+
 sumNumbers(1, 3)
 // 4
 
