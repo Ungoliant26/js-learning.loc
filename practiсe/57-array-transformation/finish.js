@@ -9,6 +9,21 @@
  * 3. Исходный массив постов должен остаться без изменений
  */
 
+const processPosts = (newPosts) => {
+  return newPosts.map((onePost) => {
+    const {
+      postId,
+      author: postAuthor,
+      commentsQty: postCommentsQty = 0,
+    } = onePost
+    return {
+      postAuthor,
+      postCommentsQty,
+      postId: postId + 1000,
+    }
+  })
+}
+
 const testPosts = [
   {
     postId: 234,

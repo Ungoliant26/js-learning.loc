@@ -17,7 +17,18 @@ let person = {
   cartId: 435,
 }
 
+{
+  let _id, processed, cart
+  ;({ _id, processed, cart, ...person } = person)
+}
+
 console.log(person)
+
+// Option delete operator
+/* delete person._id
+delete person.processed
+delete person.cart */
+
 /*
 {
   index: 4,
