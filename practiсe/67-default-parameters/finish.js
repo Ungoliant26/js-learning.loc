@@ -4,12 +4,15 @@
  *  - Почему в строке 12 мы не можем просто использовать оператор ИЛИ?
  *    mult = mult || 2
  *
+ *
+ *
  * 2. Перепишите функцию с использованием значения по умолчанию
  * для параметра mult в "multiplyBy"
  */
 
-function multiplyBy(a, mult) {
+function multiplyBy(a, mult = 2) {
   mult = mult !== undefined ? mult : 2
+  // mult = mult || 2
   console.log(a * mult)
 }
 
