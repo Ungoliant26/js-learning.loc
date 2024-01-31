@@ -41,5 +41,7 @@ console.log(greeting1.greet('Emily'))
 
 const greeting2 = createGreeting()
 
+greeting1.changeGreeting('Good Evening')
+console.log(greeting1.greet('Emily'))
 console.log(greeting2.greet('Emily'))
 // Hey, this is Emily
