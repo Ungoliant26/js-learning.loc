@@ -13,10 +13,27 @@ const objectWithNumbers = {
   a: 10,
   b: 20,
   c: 'string',
-  d: 12,
+  d: 30,
 }
 
-// Создайте функцию здесь
+/* const sumObjectValues = (objectNumbers) => {
+  let objectSum = 0
+  Object.entries(objectNumbers).forEach((objectKey) => {
+    if (typeof objectNumbers[objectKey] === 'number') {
+      objectSum += objectNumbers[objectKey]
+    }
+  })
+  return objectSum
+} */
+
+const sumObjectValues = (objectNumbers) => {
+  Object.keys(objectNumbers).reduce((objectSum, objectNum) => {
+    if (typeof objectNum[objectNumbers] === 'number') {
+      objectSum += objectNum[objectNumbers]
+    }
+  }, 0)
+  return objectNum
+}
 
 const result = sumObjectValues(objectWithNumbers)
 console.log(result)
